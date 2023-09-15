@@ -1,0 +1,18 @@
+{% extends 'customer/base.html' %}
+<p style="background-image: url('/media/menu_images/cover.jpg');"></p>
+{% block content %}
+<div class="container mb-5">
+    
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8 col-sm-12 offset-md-1 p-4 text-center">
+            <h1>Republik</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-1">
+        <div class="card col-md-5 col-sm-12 offset-md-1 p-4 text-center">
+            <h2>Онлайн захиалга</h2>
+            <a href="{% url 'order' %}" class="green btn btn-outline-primary ">захиалга хийх</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

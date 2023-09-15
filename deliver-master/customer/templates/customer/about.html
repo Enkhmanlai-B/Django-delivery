@@ -1,0 +1,28 @@
+{% extends 'customer/base.html' %}
+
+{% block content %}
+<div class="container mb-5">
+    <div class="row justify-content-center mt-1">
+            <form method="POST">
+                {% csrf_token %}
+                {% load static %}
+                <link rel="stylesheet" href="{% static 'style.css' %}">
+                <div class="card">
+                    <a target="_blank">
+                      <img src="/media/menu_images/3.png" alt="Cinque Terre" width="400" height="1000">
+                    </a>
+                </div>
+                <div class="form-group pt-3">
+                    <input required class="form-control" type="text" placeholder="Нэр" name="name" />
+                </div>
+                <div class="form-group pt-3">
+                    <input required class="form-control" type="text" placeholder="Захиалах зүйлсээ бичнэ үү" name="reservation" />
+                </div>
+                <div class="form-group pt-3">
+                    <input required class="form-control" type="text" placeholder="Ширээний дугаар" name="table_number" />
+                </div>
+                <button class="btn btn-dark mt-5">Захиалах</button>
+            </form>
+    </div>
+</div>
+{% endblock content %}
